@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav>
+        </nav>
+        <div class="sidebar">
+            <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+            <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+            <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        </div>
+        <div style="float: right; width: 85%;">
+            <table class="table">
+            <tr>
+                <td>
+                    <form method="POST" enctype="multipart/form-data" action="http://localhost:3000/upload">
+                        <input type="file" id="myFile" name="menu_image">
+                        <input type="submit">
+                      </form>
+                    <!-- <label class="center padding">Upload Menu</label> -->
+                    <!-- <img src="./menu_uploads/xyz_jpeg.jpeg"></img> -->
+                    <img id="menu" width="300" height="300"></img>  
+                </td>
+                <td>
+                    <label class="center padding">Generate QR Code</label>
+                    <img id="qrcode" width="300" height="300"></img>   
+                </td>
+            </tr>
+        </table>
+        </div>        
+        <script>
+            window.onload = function(){
+                fetch("http://localhost:3000/",{
+                    method : "GET",
+                    mode : "cors",
+                    headers : {
+                        "Content-Type" : "application/json"
+                    },
+                }).then((response)=>{
+                    return response.text();
+                }).then((qrurl)=>{
+                    var ifrme = document.getElementById("qrcode");
+                    ifrme.src = qrurl;
+                })
+            }
+        </script>
+    </body>
+</html>
