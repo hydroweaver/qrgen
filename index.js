@@ -5,8 +5,10 @@ const fs = require('fs');
 const multer = require('multer');
 const upload = multer({dest:"./menu_uploads/"});
 const path = require('path');
+const handlebars = require('express-handlebars');
 const { deepStrictEqual } = require('assert');
 const { callbackify } = require('util');
+const mongoose = require('mongoose');
 
 const handleError = (err, res) => {
     res
@@ -17,7 +19,10 @@ const handleError = (err, res) => {
 
 app = express();
 app.use(cors());
-//app.use(express.static(__dirname + '\\menu_uploads'));
+// app.use('/', require('./routes/main'));
+//app.use(express.static(__dirname, 'menu_uploads'));
+// mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true, useUnifiedTopology: true});
+// app.use()
 
 app.get('/', (req, res)=>{
     //dat only refers to fulfilled
@@ -48,6 +53,7 @@ after_upload = (req, res)=>{
 
     //generate QR code based on static page
 }
+    
 
 app.post('/upload', upload.single('menu_image'), after_upload ,function (req, res, next) {
     // console.log(req.file);

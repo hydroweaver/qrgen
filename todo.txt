@@ -1,0 +1,9 @@
+  // firstName : String,
+  // lastName: String,
+  // userID : String,
+  // defaultMenu: Boolean,
+  // fileName: String,
+  // imagePath: String,
+  // uploadDate : {type: Date, default:Date.now},
+  // modifiedDate : {type: Date, default:Date.now},
+  // views : Number
