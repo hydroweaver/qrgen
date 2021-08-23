@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const multer = require('multer')
+const path = require('path')
 // const upload = multer({dest:"./menu_uploads/"})
 const db = mongoose.connection
 
@@ -12,6 +13,7 @@ app = express()
 // app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}));
+app.use(express.static('static_paths'))
 
 mongoose.connect('mongodb://localhost/images', {useNewUrlParser: true, useUnifiedTopology: true})
 db.on('error', console.error.bind(console, 'connection error:'))
@@ -25,6 +27,10 @@ const imageSchema = new mongoose.Schema({
 const imageModel = mongoose.model('imageModel', imageSchema)
 db.once('open', ()=>{
   console.log('Connection to DB Successful')
+})
+
+app.get('/', (req, res)=>{
+  res.send("Welcome!")
 })
 
 //https://newbedev.com/express-js-prevent-get-favicon-ico
@@ -64,13 +70,33 @@ app.get('/:menuid', (req, res, next)=>{
     }
     //the above is not a get error, its a db not found, error, so needs to vbe resolved differently
     else{
-      res.setHeader('content-type', 'image/png');
-      res.send(result.img.data);
+      if(result==null){
+        console.log(__dirname);
+        res.sendFile(path.join(__dirname, '/static_paths/404.html'));
+      }
+      else{
+        res.setHeader('content-type', 'image/png');
+        res.send(result.img.data);
+      }
+    }
+
+    function handle_error(err){
+      console.log(err);
+      res.sendStatus(400);
+      res.send('Uh-Oh! Looks like this image is not available.')
     }
 
   })
 })
 
+
+
 app.listen(3000, ()=>{
   console.log("Server Running at 3000")
 })
+
+
+//image preview - see the https://stackoverflow.com/questions/33279153/rest-api-file-ie-images-processing-best-practices
+//flow for preview, not 2 uploads, only 1
+//add dates & access counter
+//merge qr generation with db save
