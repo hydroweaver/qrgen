@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">    
+    </head>
+    <body>
+    <style>
+        .flex_row_container{
+            display: flex;
+            flex-direction: row;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid crimson;
+        }
+        .flex_row_container div{
+            min-width: 50px;
+            border: 2px solid rgb(20, 220, 127);
+        }
+        .flex_col_container{
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            align-items: stretch;
+            justify-content: flex-start;
+            border: 2px solid crimson;
+        }
+        .flex_col_container div{
+            /* min-width: 50px; */
+            border: 2px solid rgb(20, 220, 127);
+        }
+        .multi_line{
+            flex-direction: column;
+            width: 500px;
+            height: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            border: 2px solid crimson
+        }
+        .multi_line div{
+            /* min-width: 50px; */
+            border: 1px solid chocolate
+        }
+    </style>
+    <h3>flex_row_container</h3>
+    <div class="flex_row_container">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>        
+    </div>
+    <br>
+    <h3>flex_col_container</h3>
+    <div class="flex_col_container">
+        <div style="align-self: flex-end;">One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>     
+    </div>
+    <br>
+    <h3>Aligning content on the cross axis — the align-content property</h3>
+    <div class="multi_line">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+        <div>Eight</div>
+      </div>
+    </body>
+</html>

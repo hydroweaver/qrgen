@@ -7,3 +7,45 @@
   // uploadDate : {type: Date, default:Date.now},
   // modifiedDate : {type: Date, default:Date.now},
   // views : Number
+
+// mix of dotpe with auto qr builder
+// Sendgrid email
+// '/' presses search ??
+// something to do with location? Get location of business and put it
+// https://blog.logrocket.com/using-passport-authentication-node-js/
+// https://www.indiehackers.com/post/authentication-in-nodejs-d71c59e9b9
+// Backgrounds & UI
+// https://cdn07.qrcodechimp.com/images/bg_homepage.svg
+//https://www.qrcodechimp.com/
+//https://www.screenshotapi.net/
+//https://app.screenshotapi.net/?ref=webflow
+//https://apiflash.com/
+//https://fontawesome.com/
+//https://www.qrcodechimp.com/
+//https://songrender.com/
+https://harvy.app/
+// Hero backgrounds - https://harvy.app/static/media/Hero-Background.314e9a27.png
+//https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/layering
+//https://www.teamtailor.com/en/?utm_campaign=poweredby&utm_content=textlink&utm_medium=web&utm_source=join.nexusgroup.com&utm_term=career_site
+
+//Flows of website
+//Login
+//Register
+//App
+//https://www.qrcodechimp.com/
+//https://app.screenshotapi.net/?ref=webflow
+//https://apiflash.com/
+//https://harvy.app/
+//https://units.kitchen/
+
+//Ask Filip Menrev
+How to add flows / workflows like Tally? Any open source Library?
+https://www.indiehackers.com/post/i-co-founded-tally-a-new-type-of-form-builder-1-year-ago-and-bootstrapped-it-to-30k-arr-with-a-team-of-2-ama-bb864f23ab
+https://www.indiehackers.com/post/how-we-quit-our-jobs-to-work-on-our-startup-lost-half-of-our-clients-decided-to-pivot-and-ended-up-building-a-no-code-tool-415596dd30
+https://www.producthunt.com/posts/tally-6514ee79-0820-4e3e-bbb4-4429549bb16c
+https://twitter.com/filipminev?lang=en
+https://filipminev.com/
+//https://logomaster.ai/app/edit
+
+
+
