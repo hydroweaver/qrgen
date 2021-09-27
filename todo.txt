@@ -46,6 +46,35 @@ https://www.producthunt.com/posts/tally-6514ee79-0820-4e3e-bbb4-4429549bb16c
 https://twitter.com/filipminev?lang=en
 https://filipminev.com/
 //https://logomaster.ai/app/edit
+https://app.waldo.io/users/new
 
+
+//Admin or app UI
+https://www.indiehackers.com/post/im-totally-stuck-in-the-design-process-42472a4d1f
+https://storage.googleapis.com/indie-hackers.appspot.com/post-images/42472a4d1f/26NnxXhxV5dWdfIauFuDPDDUrFC2/fcf2f9a6-8e57-d9d5-c06e-066b4c16f1fb.jpg
+https://getbootstrap.com/docs/4.1/examples/
+  - https://getbootstrap.com/docs/4.1/examples/dashboard/
+  - https://getbootstrap.com/docs/4.1/examples/
+  - https://getbootstrap.com/docs/5.1/examples/heroes/
+
+ - Simple Landing Page that you are building right now
+ - Menu designer will come when upload image is not there
+ - if image is there, QR will be made of that, else designer left panel
+ - Left panel
+  - Image Console
+     - Simple show based like on line 53 or bootstrap example page 2 panels of upload and QR code
+    - Here you can add QR maker for text, link, etc. etc.
+  - Analytics
+    - Simple log right now with data about location, time etc.
+  - Menu designer (later)
+    - Like Zomato
+  - My Subscription
+    - Current Plan and billing date types
+user pricing saved in database?
+Just api server in qr for text irl etc and put in docs in banner
+https://ngrok.com/pricing - CHECK BANNER SPACE -- ALSO TWILIO CONSOLE BANNER SPACE SIMPLE
+//Login overlay - singin sign up form  overlay
+//load partials with EJS - check brad traversy video
+//check login strategy and storybook login JS behind - https://github.com/bradtraversy/storybooks
 
 

@@ -39,9 +39,10 @@ app.get('/favicon.ico', function(req, res) {
   res.sendStatus(204);
 });
 
-
+//USE FORM DATA IN POSTMAN TO UPLOAD!
 app.post('/uploadpicture', upload.single('menu_image'), (req, res)=>{
   console.log("Uploading file...")
+  console.log(req);
   const doc = new imageModel({
     _id : 'image' + Date.now().toString(),
     img: {

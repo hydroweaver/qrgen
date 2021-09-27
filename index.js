@@ -9,6 +9,7 @@ const handlebars = require('express-handlebars');
 const { deepStrictEqual } = require('assert');
 const { callbackify } = require('util');
 const mongoose = require('mongoose');
+const getimages = require('./routes/getimage')
 
 const handleError = (err, res) => {
     res
@@ -19,18 +20,22 @@ const handleError = (err, res) => {
 
 app = express();
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'FlexPlay')));
+app.use(express.static(path.join(__dirname, 'views')));
 // app.use('/', require('./routes/main'));
-//app.use(express.static(__dirname, 'menu_uploads'));
-// mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true, useUnifiedTopology: true});
-// app.use()
+
+
+// app.get('/', (req, res)=>{
+//     //dat only refers to fulfilled
+//     qrcode.toDataURL("https://stackoverflow.com/questions/24071390/horizontally-centering-an-images-in-an-iframe-within-a-div").then((dat)=>{
+//         res.send(dat);
+//     }).catch(err=>{
+//         res.send("Error" + err);
+//     });
+// });
 
 app.get('/', (req, res)=>{
-    //dat only refers to fulfilled
-    qrcode.toDataURL("https://stackoverflow.com/questions/24071390/horizontally-centering-an-images-in-an-iframe-within-a-div").then((dat)=>{
-        res.send(dat);
-    }).catch(err=>{
-        res.send("Error" + err);
-    });
+    res.sendFile('landing.html', {root : path.join(__dirname, 'FlexPlay')})
 });
 
 app.get('/menu_uploads/:image_name', (req, res)=>{
